@@ -39,8 +39,8 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
    * DHCP
 4. Finalize a instalação
 
-📷
-![Server Manager](./imagens/servidor.png)
+
+![servidor](servidor.png)
 
 ---
 
@@ -63,7 +63,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 3. Clique em **Novo → Usuário**
 4. Preencha os dados e defina a senha
 
-📷
+
 ![Criação de usuário](./imagens/criacaodeusuario.png)
 
 ---
@@ -75,7 +75,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 3. Aba **Conta**
 4. Marque **Conta desabilitada**
 
-📷
+
 ![Bloqueio](bloqueio.png)
 
 💡 Ao tentar login, o sistema exibirá:
@@ -97,7 +97,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
    * DNS
 4. Ative o escopo
 
-📷
+
 ![DHCP](DHCP.png)
 
 ---
