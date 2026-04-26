@@ -133,7 +133,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
    * ✔️ **Servidor de Arquivos**
 6. Avance e finalize a instalação
 
-![fileserver](fileserver.png)
+
 
 ---
 
@@ -156,7 +156,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 1. Clique em **Permissões**
 2. Remova **Everyone**
-3. Adicione o grupo ou usuário correto (ex: `GRP_Gerentes`)
+3. Adicione o grupo ou usuário correto (ex: `Gerentes`)
 4. Defina as permissões conforme necessário
 
 ---
@@ -176,10 +176,10 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 | Pasta     | Grupo          | Permissão      |
 | --------- | -------------- | -------------- |
-| Gerentes  | GRP_Gerentes   | Controle Total |
-| Projetos  | GRP_Projetos   | Modificação    |
-| Compras   | GRP_Compras    | Modificação    |
-| Vendas    | GRP_Vendas     | Modificação    |
+| Gerentes  | Gerentes   | Controle Total |
+| Projetos  | Projetos   | Modificação    |
+| Compras   | Compras    | Modificação    |
+| Vendas    | Vendas     | Modificação    |
 
 ![permissoes](permissoes.png)
 
@@ -190,23 +190,18 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 1. Acesse **Usuários e Computadores do Active Directory**
 2. Crie grupos:
 
-   * `GRP_Gerentes`
-   * `GRP_Projetos`
-   * `GRP_Compras`
-   * `GRP_Vendas`
+   * `Gerentes`
+   * `Projetos`
+   * `Compras`
+   * `Vendas`
 3. Adicione os usuários aos grupos correspondentes
 4. Utilize os grupos nas permissões das pastas
 
-![grupos](grupos.png)
+![/imagesgrupos](images/grupos.png)
 
 ---
 
-### 💻 Acesso pelo Cliente
 
-No computador cliente:
-
-1. Pressione `Win + R`
-2. Digite:
 
 
 
