@@ -40,7 +40,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 4. Finalize a instalação
 
 
-![servidor](servidor.png)
+![images/servidor](images/servidor.png)
 
 ---
 
@@ -64,7 +64,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 4. Preencha os dados e defina a senha
 
 
-![usuarios](usuarios.png)
+![images/usuarios](images/usuarios.png)
 
 ---
 
@@ -76,12 +76,12 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 4. Marque **Conta desabilitada**
 
 
-![Bloqueio](bloqueio.png)
+![images/Bloqueio](images/bloqueio.png)
 
 💡 Ao tentar login, o sistema exibirá:
 
 > "Sua conta foi desativada. Contate o administrador do sistema."
-> ![criacaodeusuario](criacaodeusuario.png)
+> ![images/criacaodeusuario](images/criacaodeusuario.png)
 
 ---
 
@@ -98,7 +98,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 4. Ative o escopo
 
 
-![DHCP](DHCP.png)
+![images/DHCP](images/DHCP.png)
 
 ---
 
@@ -108,7 +108,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 * IP atribuído via DHCP
 * Máquina ingressada no domínio
 
-![rede](rede.png)
+![images/rede](images/rede.png)
 
 📌 Exemplo:
 
@@ -146,7 +146,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 5. Marque **Compartilhar esta pasta**
 6. Defina um nome de compartilhamento (ex: `Gerentes`)
 
-![pastas](pastas.png)
+![images/pastas](images/pastas.png)
 
 ---
 
