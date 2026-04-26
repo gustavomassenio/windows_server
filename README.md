@@ -23,7 +23,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 | Servidor      | Windows Server 2022 |
 | Cliente       | Windows 11          |
 | Virtualização | Oracle VirtualBox   |
-| Serviços      | AD DS, DHCP, DNS    |
+| Serviços      | AD DS, DHCP, DNS e Serviços de Arquivo e Armazenamento    |
 
 ---
 
