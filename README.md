@@ -117,6 +117,99 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 ---
 
+## 📁 7️⃣ Configuração do Servidor de Arquivos
+
+### 🔧 Instalação do Serviço
+
+1. Acesse o **Gerenciador do Servidor**
+2. Clique em **Adicionar funções e recursos**
+3. Avance até **Funções de Servidor**
+4. Expanda:
+
+   * **Serviços de Arquivo e Armazenamento**
+   * **Serviços de Arquivo e iSCSI**
+5. Marque:
+
+   * ✔️ **Servidor de Arquivos**
+6. Avance e finalize a instalação
+
+![fileserver](fileserver.png)
+
+---
+
+### 📂 Criação das Pastas Compartilhadas
+
+1. Crie as pastas no servidor, por exemplo:
+2. Clique com botão direito na pasta → **Propriedades**
+3. Vá na aba **Compartilhamento**
+4. Clique em **Compartilhamento Avançado**
+5. Marque **Compartilhar esta pasta**
+6. Defina um nome de compartilhamento (ex: `Gerentes`)
+
+![pastas](pastas.png)
+
+---
+
+### 🔐 Configuração de Permissões
+
+#### Permissão de Compartilhamento
+
+1. Clique em **Permissões**
+2. Remova **Everyone**
+3. Adicione o grupo ou usuário correto (ex: `GRP_Gerentes`)
+4. Defina as permissões conforme necessário
+
+---
+
+#### Permissão NTFS (Segurança)
+
+1. Vá na aba **Segurança**
+2. Clique em **Editar**
+3. Adicione o grupo correspondente
+4. Configure:
+
+   * Leitura
+   * Modificação
+   * Controle total
+
+💡 Exemplo:
+
+| Pasta     | Grupo          | Permissão      |
+| --------- | -------------- | -------------- |
+| Gerentes  | GRP_Gerentes   | Controle Total |
+| Projetos  | GRP_Projetos   | Modificação    |
+| Compras   | GRP_Compras    | Modificação    |
+| Vendas    | GRP_Vendas     | Modificação    |
+
+![permissoes](permissoes.png)
+
+---
+
+### 👥 Organização com Grupos
+
+1. Acesse **Usuários e Computadores do Active Directory**
+2. Crie grupos:
+
+   * `GRP_Gerentes`
+   * `GRP_Projetos`
+   * `GRP_Compras`
+   * `GRP_Vendas`
+3. Adicione os usuários aos grupos correspondentes
+4. Utilize os grupos nas permissões das pastas
+
+![grupos](grupos.png)
+
+---
+
+### 💻 Acesso pelo Cliente
+
+No computador cliente:
+
+1. Pressione `Win + R`
+2. Digite:
+
+
+
 ## 🔐 Testes Realizados
 
 * ✔️ Criação de usuário
