@@ -181,7 +181,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 | Compras   | Compras    | Modificação    |
 | Vendas    | Vendas     | Modificação    |
 
-![permissoes](permissoes.png)
+![images/permissoes](images/permissoes.png)
 
 ---
 
