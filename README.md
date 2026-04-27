@@ -148,6 +148,8 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 ![images/pastas](images/pastas.png)
 
+![images/compa](images/compa.png)
+
 ---
 
 ### 🔐 Configuração de Permissões
