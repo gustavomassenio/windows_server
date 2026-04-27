@@ -201,7 +201,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 ![images/grupos](images/grupos.png)
 
-![images/gp](images.gp.png)
+![images/gp](images/gp.png)
 
 ---
 
