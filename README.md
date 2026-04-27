@@ -225,10 +225,15 @@ Automatizar tarefas no login do usuário, como:
 
 C:\Windows\SYSVOL\sysvol\gustavo.tec\scripts
 
-# Criando o Script
+### Criando o Script
 1. Dentro da pasta scripts
 2. Clique com botão direito → Novo → Documento de Texto
-3. Renomeie para
+3. Renomeie para o nome do grupo que deseja
+4. Em seguida voce pode usar esses comandos para que a ação seja feita net use G: \\SRVGUS\Compras - Aqui abrirá uma unidade de rede da pasta "Compras"
+5. A letra após o "use" é de sua preferencia.
+
+## Exemplos
+![images/scripts](images/scripts.png)
 
 
 
