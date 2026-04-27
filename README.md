@@ -247,6 +247,13 @@ Não esqueça de digitar o nome do arquivo .cmd para que o script funcione corre
 ![images/scriptcompleto](images/scriptcompleto.png)
 
 
+## Visualização
+
+Esta será a imagem que irá aparecer para o usuario após as confirgurações que realizamos.
+* Ele consegue visualizar e acessar apenas as pastas que ele tem acesso.
+
+  ![images/home](images/home.png)
+
 
 
 
