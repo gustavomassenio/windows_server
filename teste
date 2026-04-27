@@ -1,0 +1,206 @@
+Teste 
+
+# Projeto: Servidor Windows Server 2022
+
+## Descrição
+
+Este projeto demonstra a implementação de um ambiente de rede utilizando o **Windows Server 2022**, com foco nos seguintes serviços e funcionalidades:
+
+- Active Directory Domain Services (AD DS)  
+- Criação e gerenciamento de usuários  
+- Bloqueio de contas  
+- Configuração de DHCP  
+- Integração com máquina cliente (Windows 11)  
+- Compartilhamento de arquivos com controle de acesso  
+- Automação de logon com scripts  
+
+O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
+
+---
+
+## Estrutura do Ambiente
+
+| Componente    | Descrição           |
+| ------------- | ------------------- |
+| Servidor      | Windows Server 2022 |
+| Cliente       | Windows 11          |
+| Virtualização | Oracle VirtualBox   |
+| Serviços      | AD DS, DHCP, DNS e Serviços de Arquivo e Armazenamento |
+
+---
+
+## Etapas do Projeto
+
+### 1. Instalação de Funções e Recursos
+
+1. Acesse o **Gerenciador do Servidor**
+2. Clique em **Adicionar funções e recursos**
+3. Selecione as seguintes funções:
+   - AD DS  
+   - DHCP  
+4. Finalize a instalação
+
+![images/servidor](images/servidor.png)
+
+---
+
+### 2. Promoção a Controlador de Domínio
+
+1. Clique em **Promover este servidor a um controlador de domínio**
+2. Selecione **Adicionar nova floresta**
+3. Defina o domínio (ex: `gustavo.tec`)
+4. Configure a senha do modo de restauração (DSRM)
+5. Reinicie o servidor
+
+---
+
+### 3. Criação de Usuários
+
+1. Acesse **Usuários e Computadores do Active Directory**
+2. Navegue até a pasta **Users**
+3. Clique em **Novo → Usuário**
+4. Preencha os dados e defina a senha
+
+![images/usuarios](images/usuarios.png)
+
+---
+
+### 4. Bloqueio de Usuário
+
+1. Clique com o botão direito no usuário
+2. Acesse **Propriedades**
+3. Vá até a aba **Conta**
+4. Marque a opção **Conta desabilitada**
+
+![images/bloqueio](images/bloqueio.png)
+
+Ao tentar realizar login, o sistema exibirá a mensagem:
+
+> "Sua conta foi desativada. Contate o administrador do sistema."
+
+![images/criacaodeusuario](images/criacaodeusuario.png)
+
+---
+
+### 5. Configuração do DHCP
+
+1. Acesse o serviço **DHCP**
+2. Clique em **IPv4 → Novo Escopo**
+3. Configure:
+   - Intervalo de IP (ex: `192.168.33.100 - 192.168.33.200`)  
+   - Máscara de sub-rede  
+   - Gateway  
+   - DNS  
+4. Ative o escopo
+
+![images/DHCP](images/DHCP.png)
+
+---
+
+### 6. Teste com Cliente
+
+- Cliente configurado para obter IP automaticamente  
+- Endereço IP atribuído via DHCP  
+- Máquina ingressada no domínio  
+
+![images/rede](images/rede.png)
+
+Exemplo de configuração:
+
+- IP: `192.168.33.100`  
+- Host: `pc1.gustavo.tec`  
+
+---
+
+### 7. Configuração do Servidor de Arquivos
+
+#### 7.1 Instalação do Serviço
+
+1. Acesse o **Gerenciador do Servidor**
+2. Clique em **Adicionar funções e recursos**
+3. Avance até **Funções de Servidor**
+4. Expanda:
+   - Serviços de Arquivo e Armazenamento  
+   - Serviços de Arquivo e iSCSI  
+5. Selecione **Servidor de Arquivos**
+6. Finalize a instalação
+
+---
+
+#### 7.2 Criação das Pastas Compartilhadas
+
+1. Crie as pastas no servidor
+2. Clique com o botão direito → **Propriedades**
+3. Acesse a aba **Compartilhamento**
+4. Clique em **Compartilhamento Avançado**
+5. Marque **Compartilhar esta pasta**
+6. Defina o nome do compartilhamento (ex: `Gerentes`)
+
+![images/pastas](images/pastas.png)
+
+![images/compa](images/compa.png)
+
+---
+
+#### 7.3 Configuração de Permissões
+
+**Permissões de Compartilhamento**
+
+1. Clique em **Permissões**
+2. Remova o grupo **Everyone**
+3. Adicione o grupo adequado (ex: `Gerentes`)
+4. Defina as permissões necessárias
+
+**Permissões NTFS (Segurança)**
+
+1. Acesse a aba **Segurança**
+2. Clique em **Editar**
+3. Adicione os grupos correspondentes
+4. Configure as permissões:
+
+- Leitura  
+- Modificação  
+- Controle total  
+
+Exemplo:
+
+| Pasta     | Grupo     | Permissão      |
+| --------- | --------- | -------------- |
+| Gerentes  | Gerentes  | Controle total |
+| Projetos  | Projetos  | Modificação    |
+| Compras   | Compras   | Modificação    |
+| Vendas    | Vendas    | Modificação    |
+
+![images/permissoes](images/permissoes.png)
+
+---
+
+#### 7.4 Organização com Grupos
+
+1. Acesse **Usuários e Computadores do Active Directory**
+2. Crie os grupos:
+   - `Gerentes`  
+   - `Projetos`  
+   - `Compras`  
+   - `Vendas`  
+3. Adicione os usuários aos respectivos grupos
+4. Utilize os grupos na configuração de permissões
+
+![images/grupos](images/grupos.png)
+
+![images/gp](images/gp.png)
+
+---
+
+### 8. Configuração de Scripts de Logon (SYSVOL)
+
+#### Objetivo
+
+Automatizar tarefas no login dos usuários, como mapeamento de unidades de rede.
+
+---
+
+#### Acesso à pasta de scripts
+
+Navegue até o diretório:
+
