@@ -199,7 +199,9 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 3. Adicione os usuários aos grupos correspondentes
 4. Utilize os grupos nas permissões das pastas
 
-![/imagesgrupos](images/grupos.png)
+![images/grupos](images/grupos.png)
+
+![images/gp](images.gp.png)
 
 ---
 
