@@ -236,13 +236,15 @@ C:\Windows\SYSVOL\sysvol\gustavo.tec\scripts
 ## Exemplos
 ![images/scripts](images/scripts.png)
 
-![images/scriptcompleto](images/scriptcompleto.png)
+
 
 
 ### Adicionando o comando pelo usuario
 Dentro da unidade organizacional selecione os usuarios que voce deseja que utilize aquele script
 clique com o botão direito em propriedades, logo depois perfil e digite o nome do arquivo que voce salvou na aba "script de logon"
 Não esqueça de digitar o nome do arquivo .cmd para que o script funcione corretamente.
+
+![images/scriptcompleto](images/scriptcompleto.png)
 
 
 
