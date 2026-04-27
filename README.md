@@ -205,6 +205,32 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 
 ---
 
+## 🧾 8️⃣ Configuração de Scripts de Logon (SYSVOL)
+
+### 📌 Objetivo
+
+Automatizar tarefas no login do usuário, como:
+
+- Mapeamento de unidades de rede  
+- Execução de comandos  
+- Padronização do ambiente  
+
+---
+
+### 📂 Acessando a pasta de scripts (SYSVOL)
+
+1. No servidor, abra o **Explorador de Arquivos**
+2. Navegue até:
+
+
+C:\Windows\SYSVOL\sysvol\gustavo.tec\scripts
+
+# Criando o Script
+1. Dentro da pasta scripts
+2. Clique com botão direito → Novo → Documento de Texto
+3. Renomeie para
+
+
 
 
 
@@ -216,6 +242,7 @@ O ambiente foi virtualizado utilizando o **Oracle VirtualBox**.
 * ✔️ Bloqueio de conta
 * ✔️ DHCP funcionando
 * ✔️ Comunicação cliente-servidor
+* ✔️ Script de logon
 
 ---
 
